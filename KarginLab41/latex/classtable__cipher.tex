@@ -1,0 +1,116 @@
+\hypertarget{classtable__cipher}{}\doxysection{table\+\_\+cipher Class Reference}
+\label{classtable__cipher}\index{table\_cipher@{table\_cipher}}
+
+
+Шифрование методом табличной маршрутной перестановки  
+
+
+
+
+{\ttfamily \#include $<$table\+\_\+cipher.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtable__cipher_a05d19ae36e6a442e3bf1a5488deb5fd8}{encrypt}} ()
+\begin{DoxyCompactList}\small\item\em Шифрование \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtable__cipher_af18e578430eab68ffd6af324a60bdc9d}{decrypt}} ()
+\begin{DoxyCompactList}\small\item\em Расшифрование \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtable__cipher_a095a945c28462cb26d6e732274675046}{text\+\_\+validation}} (std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Обработка ошибок в строке для операции \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtable__cipher_af0a1700a234e0e8f3f9bd8ee52996e90}{key\+\_\+validation}} (uint \&key, std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Обработка ошибок ключа \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtable__cipher_a35b1f399c9e3f4e588729eeb84b6494d}\label{classtable__cipher_a35b1f399c9e3f4e588729eeb84b6494d}} 
+\mbox{\hyperlink{classtable__cipher_a35b1f399c9e3f4e588729eeb84b6494d}{table\+\_\+cipher}} (std\+::string text, double k, std\+::string \&initial\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Конструктор для установки обрабатываемой строки, ключа и начального значения двумерного вектора \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Шифрование методом табличной маршрутной перестановки 
+
+Ключ устанавливается в конструкторе. Для зашифровывания и расшифровывания предназначены методы encrypt и decrypt. \begin{DoxyWarning}{Warning}
+Реализация только для английского языка 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtable__cipher_af18e578430eab68ffd6af324a60bdc9d}\label{classtable__cipher_af18e578430eab68ffd6af324a60bdc9d}} 
+\index{table\_cipher@{table\_cipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!table\_cipher@{table\_cipher}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::string table\+\_\+cipher\+::decrypt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Расшифрование 
+
+Строка для операции инициализируется в конструкторе класса \begin{DoxyReturn}{Returns}
+Функция возвращает расшифрованную строку 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtable__cipher_a05d19ae36e6a442e3bf1a5488deb5fd8}\label{classtable__cipher_a05d19ae36e6a442e3bf1a5488deb5fd8}} 
+\index{table\_cipher@{table\_cipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!table\_cipher@{table\_cipher}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::string table\+\_\+cipher\+::encrypt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Шифрование 
+
+Строка для операции инициализируется в конструкторе класса \begin{DoxyReturn}{Returns}
+Функция возвращает зашифрованную строку 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtable__cipher_af0a1700a234e0e8f3f9bd8ee52996e90}\label{classtable__cipher_af0a1700a234e0e8f3f9bd8ee52996e90}} 
+\index{table\_cipher@{table\_cipher}!key\_validation@{key\_validation}}
+\index{key\_validation@{key\_validation}!table\_cipher@{table\_cipher}}
+\doxysubsubsection{\texorpdfstring{key\_validation()}{key\_validation()}}
+{\footnotesize\ttfamily void table\+\_\+cipher\+::key\+\_\+validation (\begin{DoxyParamCaption}\item[{uint \&}]{key,  }\item[{std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Обработка ошибок ключа 
+
+Просиходит проверка длины ключа 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key} & Обрабатываемый ключ \\
+\hline
+\mbox{\texttt{ in}}  & {\em text} & Обрабатываемая строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возвращает 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classtable__error}{table\+\_\+error}},если} & ключ = 1 или ключ больше длины строки \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classtable__cipher_a095a945c28462cb26d6e732274675046}\label{classtable__cipher_a095a945c28462cb26d6e732274675046}} 
+\index{table\_cipher@{table\_cipher}!text\_validation@{text\_validation}}
+\index{text\_validation@{text\_validation}!table\_cipher@{table\_cipher}}
+\doxysubsubsection{\texorpdfstring{text\_validation()}{text\_validation()}}
+{\footnotesize\ttfamily void table\+\_\+cipher\+::text\+\_\+validation (\begin{DoxyParamCaption}\item[{std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Обработка ошибок в строке для операции 
+
+Строчные буквы в строке преобразует в заглавные 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em text} & Обрабатываемая строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Функция ничего не возвращает 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classtable__error}{table\+\_\+error}},если} & текст пустой или присутствуют символы не-\/бувы \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{table__cipher_8h}{table\+\_\+cipher.\+h}}\item 
+\mbox{\hyperlink{table__cipher_8cpp}{table\+\_\+cipher.\+cpp}}\end{DoxyCompactItemize}
